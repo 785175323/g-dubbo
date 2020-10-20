@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: dev
+
+mybatis-plus:
+  configuration.map-underscore-to-camel-case: true
+  #type-aliases-package:
+  mapperLocations: classpath*:mybatis/**/*Mapper.xml
+  global-config:
+    db-config:
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+  configuration:
+  #  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+dubbo:
+  # Spring Cloud Alibaba Dubbo 专属配置
+  cloud:
+    subscribed-services: '' # 设置订阅的应用列表，默认为 * 订阅所有应用
+  # Dubbo 提供者的协议
+  application:
+    name: user_provider
+  protocol:
+    name: dubbo
+    port: -1
+  # Dubbo 提供服务的扫描基础包
+  scan:
+    base-packages: com.kakuiwong.rpc
+  # Dubbo 服务提供者的配置
+  provider:
+    filter: -exception
+  #  validation: true # 开启 Provider 参数校验
+  #  version: 1.0.0 # 服务的版本号
+
+rpc:
+  verson: 1.0
