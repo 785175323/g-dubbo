@@ -1,0 +1,4 @@
+nacos:
+  server-addr: 127.0.0.1:8848
+  config:
+    namespace: f0eaa93e-2df4-469e-bfdf-b749afea4156

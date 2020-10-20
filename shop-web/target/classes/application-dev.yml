@@ -1,8 +1,4 @@
-# Dubbo 配置项
-dubbo:
-  application:
-    name: shop-web
-  # Dubbo 注册中心
-  registry:
-    #    address: spring-cloud://400-infra.server.iocoder.cn:8848 # 指定 Dubbo 服务注册中心的地址
-    address: nacos://localhost:8848 #?namespace=dev # 指定 Dubbo 服务注册中心的地址
+nacos:
+  server-addr: 127.0.0.1:8848
+  config:
+    namespace: 71c499c2-f171-4357-a8b5-e8fcba346b6a

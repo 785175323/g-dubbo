@@ -1,7 +1,12 @@
 spring:
+  application:
+    name: shop
   profiles:
     active: dev
-
 rpc:
   user:
     version: 1.0
+dubbo:
+  # Dubbo 注册中心
+  registry:
+    address: nacos://localhost:8848 #?namespace=dev # 指定 Dubbo 服务注册中心的地址
